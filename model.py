@@ -1,5 +1,5 @@
 import torch
-import torch.nn
+import torch.nn as nn
 
 class CNN(nn.Module):
 	def __init__(self):
@@ -29,7 +29,7 @@ class CNN(nn.Module):
 			nn.LeakyReLU(0.2),
 			
 			# 256 x 64 x 64
-			nn.MaxPool2d(2, 2)
+			nn.MaxPool2d(2, 2),
 			
 			# 256 x 32 x 32
 			nn.Conv2d(256, 10, 3, 1, 1),
